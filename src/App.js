@@ -19,7 +19,9 @@ useEffect(()=>{getCardData()},[])
   return (
     <div className="App">
      {cardData.map((card, index)=>
-     <ContactCard name={card.first_name} surname={card.last_name} trust={card.trust} shared={card.shared_service}  />
+     <div style={{marginTop:"50px"}}>
+     <ContactCard image='https://www.personalitytestfree.net/iframe/iframe_archivos/us.imageAVe.png' name={card.first_name} surname={card.last_name} trust={card.trust} shared={card.shared_service}  />
+     </div>
      )}
     </div>
   );

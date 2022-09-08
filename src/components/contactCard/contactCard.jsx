@@ -1,12 +1,14 @@
 import * as React from 'react';
 import { Button, Card, CardContent, CardHeader, Grid, Item} from '@material-ui/core';
 import  SelectContactButton  from '../selectContactButton';
+import  ProfileImage  from '../profileImage';
 
 
 const Subheader = ({image, name, surname, trust, shared}) =>{
     return (<> 
     <Grid container>
-        <Grid item xs={2} ><img src={image} alt="loading..." /></Grid>
+        <Grid item xs={2} ><ProfileImage 
+        image={image} trust="75" /></Grid>
         <Grid item xs={6} ><b>{name + ' ' + surname || 'loading...'}</b></Grid>
         <Grid item style={{marginLeft:"20px"}}> 
         <SelectContactButton/>
